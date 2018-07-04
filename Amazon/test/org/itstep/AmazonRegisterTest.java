@@ -42,9 +42,11 @@ public class AmazonRegisterTest {
 
 	@Test
 	public void test() {
-		WebElement idElement = driver.findElement(By.id("nav-shop"));
-		WebElement aTeg = idElement.findElement(By.tagName("a"));
-		String a = aTeg.getAttribute("href");
+		//WebElement aElement = driver.findElement(By.cssSelector("a"
+				//+ "[data-nav-ref='nav_ya_signin'][data-nav-role='signin']"
+				//+ "[tabindex='61']"));
+		WebElement aElement = driver.findElement(By.xpath("//a[data-nav-ref='nav_ya_signin'][data-nav-role='signin'][tabindex='61']"));
+		String a = aElement.getAttribute("href");
 		driver.get(a);
 	}
 
